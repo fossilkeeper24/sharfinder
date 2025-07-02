@@ -58,7 +58,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "pathfinder skibidi.kicad_prl",
+    "filename": "sharfinder.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -87,16 +87,16 @@
       9
     ],
     "col_widths": [
-      95,
-      88,
-      58,
-      40,
-      58,
-      58,
-      58,
-      42,
-      58,
-      58
+      76,
+      70,
+      46,
+      32,
+      46,
+      46,
+      46,
+      34,
+      46,
+      46
     ],
     "custom_group_rules": [],
     "expanded_rows": [],
