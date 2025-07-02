@@ -6,7 +6,9 @@
 
 ### 3D
 
-<img src="\sharfinder - all\imgs\sharfinderPCB.png" alt="sharfinder PCB 3d CAD rendering" style="height: 300px; width:500px;"/>
+<img src="\sharfinder - all\imgs\sharfinderPCB.png" alt="sharfinder PCB 3d CAD rendering front" style="height: 300px; width:500px;"/>
+
+<img src="\sharfinder - all\imgs\backOf3dPCB.png" alt="sharfinder PCB 3d CAD rendering back" style="height: 300px; width:500px;"/>
 
 ### 2D
 
