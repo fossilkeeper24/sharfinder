@@ -2,13 +2,15 @@ int BUT1 = D3;
 int BUT2 = D4;
 int BUT3 = D5;
 
-int LED1 = D0;
+int LED1 = D0; // can't quite use these because i messed up somewhere in maybe the soldering
 int LED2 = D1;
 int LED3 = D2;
 
-long but1time; // i want to use these elsewhere for minigameee
+long but1time; // i want to use these elsewhere for minigameee. give 1-20 ms buffer
 long but2time;
 long but3time;
+
+int pattern[] = {1, 2, 3};
 
 
 void setup() {
@@ -25,21 +27,38 @@ void setup() {
 
   pinMode(LED_BUILTIN, OUTPUT); //desperately testing
 
-  digitalWrite(LED1, LOW); //desperately testing
-  delay(100);
-  digitalWrite(LED1, HIGH);
-  delay(100);
+  //digitalWrite(LED1, LOW); //desperately testing
+  //delay(100);
+  //digitalWrite(LED1, HIGH);
+  //delay(100);
 
   long startTime = millis();
 
 
 }
 
-void loop() {
-  //flash_userled();
+void loop() { // input array
+
+ //  secret();
+  
+
+
+}
+
+// func to check if pattern is same as inputs, pass pattern and inputs as parameters
+// for i in range 0, len(pattern)-1 check index is same
+// return true of false then reset input array
+
+void test(){
+  but2time = 0;
+  but3time = 50; // reset
   int status1 = digitalRead(BUT1);
+  if (status1 == 0){ but1time = millis();}
   int status2 = digitalRead(BUT2);
+  if (status2 == 0){ but2time = millis();}
   int status3 = digitalRead(BUT3);
+  if (status3 == 0){ but3time = millis();}
+  // 1 means not pressed, 0 means pressed
 
   Serial.println("button1:");
   Serial.println(status1);
@@ -49,18 +68,17 @@ void loop() {
   Serial.println(status3);
   delay(400);
 
+  //Serial.println(but3time - but2time);
+  //Serial.println(but2time - but1time);
+  //Serial.println();
 
-
- //  secret();
-
-  //if (but3time - but2time <= 1000){
-    //if (but2time - but1time <= 1000){
+  if (abs(but3time - but2time) <= 20){
+    if (abs(but2time - but1time) <= 20){
+      Serial.println("All three pressed simultaneously!");
       //initialiseGame();
 
-
-
-    //}
-  //}
+    }
+  }
 
 }
 
